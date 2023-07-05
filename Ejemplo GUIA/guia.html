@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type=number] {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Compuertas Lógicas</h2>
+
+<form id="logicForm">
+    <label for="input1">Entrada 1:</label><br>
+    <input type="number" id="input1" name="input1" min="0" max="1" required><br><br>
+    <label for="input2">Entrada 2:</label><br>
+    <input type="number" id="input2" name="input2" min="0" max="1" required><br><br>
+    <label for="gate">Compuerta:</label><br>
+    <select id="gate" name="gate">
+        <option value="and">AND</option>
+        <option value="or">OR</option>
+        <option value="xor">XOR</option>
+        <option value="nand">NAND</option>
+        <option value="nor">NOR</option>
+        <option value="xnor">XNOR</option>
+    </select><br><br>
+    <input type="submit" value="Calcular">
+</form> 
+
+<p>Resultado: <span id="result"></span></p>
+
+<script src="guia.js">
+
+</script>
+
+</body>
+</html>
