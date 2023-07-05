@@ -5,17 +5,37 @@ function AND(a, b) {
 }
     
 function OR(a, b) {
-    resultado = a || b;
-    console.log(resultado)
+    let result = ""
+    // En cada iteración del bucle, se utiliza el operador OR (|) 
+    //para comparar el elemento actual de la primera secuencia (a[i]) 
+    //con el elemento correspondiente de la segunda secuencia (b[i]).
+    for (let i = 0; i < a.length; i++) {
+        result += a[i] | b[i]
+    }
+    console.log(result)
 }
     
 function NOT(a) {
-    resultado =  !a;
-    console.log(resultado)
+    //Si el elemento en el índice i del arreglo a es igual a "0", entonces se agrega "1" 
+    //a la variable resultado. De lo contrario, se agrega "0" a la variable resultado.
+    let resultado = ""
+
+    for (let i = 0; i < a.length; i++) {
+        resultado += a[i] === "0" ? "1" : "0"
+        
+    }
+    console.log( resultado)
 }
     
 function XOR(a, b) {
-    resultado = (a || b) && !(a && b)
+    let result = []
+
+    for (let i = 0; i < a.length; i++) {
+        result.push(a[i] ^ b[i])
+        
+    }
+    let resultado = result.join("")
+
     console.log(resultado)
 }
 
@@ -48,11 +68,17 @@ function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
 
         //Compuerta  NOT
     } else if (multiplexor1 === "1" && multiplexor2 === "1") {
-        NOT(binario1)  
+        NOT(binario1)
 
+        }
         //Compuerta XOR
-    }  else if (multiplexor1 === "0" && multiplexor2 === "1") {
+        else if (multiplexor1 === "0" && multiplexor2 === "1") {
         XOR(binario1, binario2)  
+
+        }
     }
 
-}
+
+
+
+    
