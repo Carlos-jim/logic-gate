@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.compuertas{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10rem;
+    padding-top: 5rem;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+
+}
+/* Circuito*/
+.circuito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*COMPUERTAS*/
+.gate_OR{
+    transform: translateY(-42px);
+    
+}
+
+
+.gate_XOR{
+    transform: translateY(-25px);
+}
+
+.gate_AND{
+    transform: translateY(-4px);
+}
+
+.gate_NOT{
+    transform: translateY(13px);
+}
+
+
+/*Uniendo los circuitos*/
+
+/*Compuerta OR*/
+.compuerta_OR{
+    display: flex;
+}
+
+.conec_OR{
+    background-color: rgb(73, 63, 63);
+    height: 5px;
+    width: 10rem;
+}
+
+
+/*Compuerta XOR*/
+.compuerta_XOR{
+    display: flex;
+}
+
+.conec_XOR{
+    background-color: rgb(73, 63, 63);
+    height: 5px;
+    width: 10rem;
+    transform: translateY(14px);
+}
+
+/*Compuerta AND*/
+.compuerta_AND{
+    display: flex;
+}
+
+.conec_AND{
+    background-color:rgb(73, 63, 63);
+    height: 5px;
+    width: 10rem;
+    transform: translateY(36px);
+}
+
+/*Compuerta NOT*/
+.compuerta_NOT{
+    display: flex;
+}
+
+.conec_NOT{
+    background-color: rgb(73, 63, 63);
+    height: 5px;
+    width: 10rem;
+    transform: translateY(50.5px);
+}
+/*Multiplexor*/
+
+.multiplexor img{
+    height: 30rem;
+    width: 7rem
+}
+
+.multiplexor{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(9.2px);
+}
+
+/*Tabla de verdad*/
+
+.tabla_verdad img{
+    height: 7rem;
+    width: 10rem;
+    padding-left: 7rem;
+}

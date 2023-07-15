@@ -1,9 +1,12 @@
 // Compuertas logicas
+
+//compuerta AND
 function AND(a, b) {
     resultado = a && b
     console.log(resultado)
 }
     
+//compuerta OR
 function OR(a, b) {
     let result = ""
     // En cada iteración del bucle, se utiliza el operador OR (|) 
@@ -15,6 +18,7 @@ function OR(a, b) {
     console.log(result)
 }
     
+//compuerta NOT
 function NOT(a) {
     //Si el elemento en el índice i del arreglo a es igual a "0", entonces se agrega "1" 
     //a la variable resultado. De lo contrario, se agrega "0" a la variable resultado.
@@ -26,7 +30,8 @@ function NOT(a) {
     }
     console.log( resultado)
 }
-    
+
+//compuerta XOR
 function XOR(a, b) {
     let result = []
 
