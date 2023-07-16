@@ -2,8 +2,18 @@
 
 //compuerta AND
 function AND(a, b) {
-    resultado = a && b
-    console.log(resultado)
+    // Inicializa una variable para almacenar el resultado
+    let result = "";
+
+    
+    // Itera sobre cada elemento de los arrays 'a' y 'b'
+    for (let i = 0; i < a.length; i++) {
+          // Realiza una operación AND bit a bit entre los elementos correspondientes de 'a' y 'b'
+    result += a[i] & b[i];
+    }
+    // Imprime el resultado
+    document.getElementById('resultado').value = result
+    console.log(result)
 }
     
 //compuerta OR
@@ -15,33 +25,29 @@ function OR(a, b) {
     for (let i = 0; i < a.length; i++) {
         result += a[i] | b[i]
     }
+
+    document.getElementById('resultado').value = result
     console.log(result)
 }
     
 //compuerta NOT
 function NOT(a) {
-    //Si el elemento en el índice i del arreglo a es igual a "0", entonces se agrega "1" 
-    //a la variable resultado. De lo contrario, se agrega "0" a la variable resultado.
-    let resultado = ""
+    
+    // Divide la cadena de entrada en un arreglo de caracteres.
+    // Usa la función map para aplicar la operación NOT a cada bit en el arreglo de entrada
+    // Une el arreglo resultante en una cadena
+    // Establece el valor del elemento con id 'resultado' al resultado de la operación NOT
+    document.getElementById('resultado').value = a.split('').map(bit => bit === "0" ? "1" : "0").join('');
 
-    for (let i = 0; i < a.length; i++) {
-        resultado += a[i] === "0" ? "1" : "0"
-        
-    }
-    console.log( resultado)
 }
 
 //compuerta XOR
 function XOR(a, b) {
     let result = []
-
     for (let i = 0; i < a.length; i++) {
         result.push(a[i] ^ b[i])
-        
     }
-    let resultado = result.join("")
-
-    console.log(resultado)
+    document.getElementById('resultado').value =  result.join("")
 }
 
 
@@ -82,6 +88,8 @@ function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
 
         }
     }
+
+    document.getElementById('resultado').readOnly = true;
 
 
 

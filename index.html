@@ -21,7 +21,23 @@
     <h2>Compuertas Logicas</h2>
 
 <div class="circuito">
+
+    <!-- Entradas-->
+    <div class="input_binario">
+        <form id="numeros_binarios">
+            <div class="Entradas_Binarios">
+                <label>A1<input type="text"  id="input_bina1" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
+                <label>B1<input type="text"  id="input_bina2" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
+                    <!--<button type="button" onclick="guardar()">Aceptar</button>-->
+                <button  type="button" onclick="guardar()" style="--clr:#39FF14"><span>Aceptar</span><i></i></button>
+            </div>
+        </form>
+    </div>
+
     <!-- Imagenes de las compuertas-->
+    <div class="conec_vertical">
+        <img src="/img/conec_vertical.png" alt="">
+    </div>
     <div class="compuertas">
 
         <div class="compuerta_OR">
@@ -49,7 +65,7 @@
     <!-- Imagen del multiplexor-->
     <div class="multiplexor">
         <img src="/img/MUX.png" alt="" class="multi">
-        
+
         <!-- Multplexor entradas-->
 
         <form id="multiplexor">
@@ -61,6 +77,12 @@
 
     </div>
 
+    <div class="resultado">
+        <form action="">
+            <label >F1<input type="text" id="resultado" onkeypress='return event.charCode === 48 || event.charCode === 49' readonly></label>
+        </form>
+
+    </div>
     <!-- Imagen de la tabla de verdad-->
     <div class="tabla_verdad">
         <img src="/img/tabla de verdad.png" alt="">
@@ -77,13 +99,6 @@
 
     <!-- Numeros binarios entradas -->
 
-    <form id="numeros_binarios">
-        <div class="Entradas_Binarios">
-            <label>Entrada binaria 1<input type="text"  id="input_bina1" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
-            <label>Entrada binaria 2<input type="text"  id="input_bina2" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
-            <button type="button" onclick="guardar()">Aceptar</button>
-        </div>
-    </form>
 
     <script src="code.js">
 
