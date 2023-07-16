@@ -1,3 +1,4 @@
+
 // Compuertas logicas
 
 //compuerta AND
@@ -38,7 +39,16 @@ function guardar() {
     //console.log(multiplexor1)
     //console.log(multiplexor2)
 
-    multiplexor(multiplexor1, multiplexor2, binario1, binario2)
+    if (binario1.length == binario2.length) {
+        multiplexor(multiplexor1, multiplexor2, binario1, binario2)
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'Ingrese la misma longitud en cada entrada, intentelo de nuevo',  
+        })
+        //alert("Ingrese las misma longitud")
+    }
 }
 
 
@@ -62,6 +72,8 @@ function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
 
 //El resultado sera de solo lectura
 document.getElementById('resultado').readOnly = true;
+
+
 
 
 
