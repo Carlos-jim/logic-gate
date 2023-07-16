@@ -54,18 +54,84 @@ function guardar() {
 
 //Multiplexor
 function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
+        var img = document.getElementById("mux");
+
+            img.animate(
+                [
+                    { backgroundColor: "transparent" },
+                    { backgroundColor: "yellow" },
+                    { backgroundColor: "transparent" }
+                ],
+                {
+                    duration: 2000,
+                    iterations: Infinity
+                }
+            );
     switch (multiplexor1 + multiplexor2) {
         case "00":
             OR(binario1, binario2);
+            //Animacion de la compuerta
+            var img = document.getElementById("OR");
+                img.animate(
+                [
+                    { backgroundColor: "transparent" },
+                    { backgroundColor: "yellow" },
+                    { backgroundColor: "transparent" }
+                ],
+                {
+                    duration: 2000,
+                    iterations: Infinity
+                }
+                );
             break;
         case "10":
             AND(binario1, binario2);
+
+            //Animacion de la compuerta
+            var img = document.getElementById("AND");
+            img.animate(
+                [
+                    { backgroundColor: "transparent" },
+                    { backgroundColor: "yellow" },
+                    { backgroundColor: "transparent" }
+                ],
+                {
+                    duration: 2000,
+                    iterations: Infinity
+                }
+                );
             break;
         case "11":
             NOT(binario1);
+            //Animacion de la compuerta
+            var img = document.getElementById("NOT");
+            img.animate(
+                [
+                    { backgroundColor: "transparent" },
+                    { backgroundColor: "yellow" },
+                    { backgroundColor: "transparent" }
+                ],
+                {
+                    duration: 2000,
+                    iterations: Infinity
+                }
+                );
             break;
         case "01":
             XOR(binario1, binario2);
+            //Animacion de la compuerta
+            var img = document.getElementById("NOT");
+            img.animate(
+                [
+                    { backgroundColor: "transparent" },
+                    { backgroundColor: "yellow" },
+                    { backgroundColor: "transparent" }
+                ],
+                {
+                    duration: 2000,
+                    iterations: Infinity
+                }
+                );
             break;
     }        
 }
