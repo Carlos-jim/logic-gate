@@ -37,27 +37,27 @@
 
     <!-- Imagenes de las compuertas-->
     <div class="conec_vertical">
-        <img src="/img/conec_vertical.png" alt="">
+        <img src="conec_vertical.webp" alt="">
     </div>
     <div class="compuertas">
 
         <div class="compuerta_OR">
-            <img src="/img/or.png" alt="or" class="gate_OR" id="OR">
+            <img src="or.webp" alt="or" class="gate_OR" id="OR">
             <div class="conec_OR"></div>
         </div>
 
         <div class="compuerta_XOR">
-            <img src="/img/xor.png" alt="xor" class="gate_XOR" id="XOR">
+            <img src="xor.webp" alt="xor" class="gate_XOR" id="XOR">
             <div class="conec_XOR"></div>
         </div>
 
         <div class="compuerta_AND">
-            <img src="/img/and.png" alt="and" class="gate_AND" id="AND">
+            <img src="and.webp" alt="and" class="gate_AND" id="AND">
             <div class="conec_AND"></div>
         </div>
         
         <div class="compuerta_NOT">
-            <img src="/img/not.png" alt="not" class="gate_NOT" id="NOT">
+            <img src="not.webp" alt="not" class="gate_NOT" id="NOT">
             <div class="conec_NOT"></div>
         </div>
         
@@ -65,14 +65,14 @@
 
     <!-- Imagen del multiplexor-->
     <div class="multiplexor">
-        <img src="/img/MUX.png" alt="" class="multi" id="mux">
+        <img src="MUX.webp" alt="" class="multi" id="mux">
 
         <!-- Multplexor entradas-->
 
         <form id="multiplexor">
             <div class="Entradas_Multiplexor">
-                <label>S1<input type="number" min="0" max="1" id="input_multi1" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
-                <label>S2<input type="number" min="0" max="1" id="input_multi2" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
+                <label>S1<input value="0" maxlength="1" type="text" min="0" max="1" id="input_multi1" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
+                <label>S2<input value="0"   maxlength="1"    type="text" min="0" max="1" id="input_multi2" onkeypress='return event.charCode === 48 || event.charCode === 49'></label>
             </div>
         </form>
 
@@ -86,13 +86,16 @@
     </div>
     <!-- Imagen de la tabla de verdad-->
     <div class="tabla_verdad">
-        <img src="/img/tabla de verdad.png" alt="">
+        <img src="tabla de verdad.webp" alt="">
+        <div class="reset">
+            <button  type="button"  style="--clr:#39FF14" id="refresh-button"><span>Resetear</span><i></i></button>
+        </div>
     </div>
+
 </div>
 
+
     <script src="code.js"></script>
-    <script src="sweetalert2.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     
 </body>
 </html>

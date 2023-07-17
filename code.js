@@ -42,12 +42,7 @@ function guardar() {
     if (binario1.length == binario2.length) {
         multiplexor(multiplexor1, multiplexor2, binario1, binario2)
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Ingrese la misma longitud en cada entrada, intentelo de nuevo',  
-        })
-        //alert("Ingrese las misma longitud")
+        alert("Ingrese la misma longitud en cada entrada, intentelo de nuevo")
     }
 }
 
@@ -120,7 +115,7 @@ function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
         case "01":
             XOR(binario1, binario2);
             //Animacion de la compuerta
-            var img = document.getElementById("NOT");
+            var img = document.getElementById("XOR");
             img.animate(
                 [
                     { backgroundColor: "transparent" },
@@ -140,7 +135,9 @@ function multiplexor(multiplexor1, multiplexor2, binario1, binario2){
 document.getElementById('resultado').readOnly = true;
 
 
-
+document.getElementById('refresh-button').addEventListener('click', function() {
+    location.reload();
+});
 
 
 
